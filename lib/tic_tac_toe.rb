@@ -7,8 +7,8 @@ class TicTacToe
   [0,3,6],
   [1,4,7],
   [2,5,8],
-  [0,4,8], 
-  [2,4,6] 
+  [0,4,8],
+  [2,4,6]
   ]
 
    def initialize(board = [" ", " ", " ", " ", " ", " ", " ", " ", " "])
@@ -89,7 +89,7 @@ class TicTacToe
 
       if (position_1 == "X" && position_2 == "X" && position_3 == "X") || (position_1 == "O" && position_2 == "O" && position_3 == "O")
         chkwon = 1
-        return win_combination 
+        return win_combination
      end
    end
    if chkwon == 0
