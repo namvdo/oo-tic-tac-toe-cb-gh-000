@@ -83,13 +83,13 @@ class TicTacToe
     index_1 = win_combination[1]
     index_2 = win_combination[2]
 
-    position_1 = @board[index_0]
-    position_2 = @board[index_1]
-    position_3 = @board[index_2]
+    position_1 = @board[index_0] 
+    position_2 = @board[index_1] 
+    position_3 = @board[index_3] 
 
       if (position_1 == "X" && position_2 == "X" && position_3 == "X") || (position_1 == "O" && position_2 == "O" && position_3 == "O")
-        checkwon = 1
-        return win_combination
+        chkwon = 1
+        return win_combination # return the win_combination indexes that won.
      end
    end
    if chkwon == 0
@@ -133,7 +133,7 @@ class TicTacToe
       turn()
     end
     if won?()
-      puts "Congratulations" + winner + "!"
+      puts "Congratulations " + winner() +"!"
     else
       puts "Cat's Game!"
     end
