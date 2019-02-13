@@ -92,7 +92,7 @@ class TicTacToe
         return win_combination
      end
    end
-   if checkwon == 0
+   if chkwon == 0
      return false
    end
   end
