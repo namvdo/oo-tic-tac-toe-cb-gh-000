@@ -79,22 +79,20 @@ class TicTacToe
     chkwon = 0
     WIN_COMBINATIONS.each do |win_combination|
 
-     # win_combination is a 3 element array of indexes that compose a win, [0,1,2]
-    # grab each index from the win_combination that composes a win.
-    win_index_1 = win_combination[0]
-    win_index_2 = win_combination[1]
-    win_index_3 = win_combination[2]
+    index_0 = win_combination[0]
+    index_1 = win_combination[1]
+    index_2 = win_combination[2]
 
-     position_1 = @board[win_index_1] # load the value of the board at win_index_1
-    position_2 = @board[win_index_2] # load the value of the board at win_index_2
-    position_3 = @board[win_index_3] # load the value of the board at win_index_3
+    position_1 = @board[index_0] 
+    position_2 = @board[index_1] 
+    position_3 = @board[index_2] 
 
       if (position_1 == "X" && position_2 == "X" && position_3 == "X") || (position_1 == "O" && position_2 == "O" && position_3 == "O")
         chkwon = 1
-        return win_combination # return the win_combination indexes that won.
+        return win_combination
      end
    end
-   if chkwon == 0
+   if checkwon == 0
      return false
    end
   end
@@ -135,9 +133,9 @@ class TicTacToe
       turn()
     end
     if won?()
-      puts "Congratulations " + winner() +"!"
+      puts "Congratulations + #{winner} !"
     else
-      puts "Cat's Game!"
+      puts "Draw!"
     end
   end
 end
