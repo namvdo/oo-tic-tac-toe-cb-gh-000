@@ -76,7 +76,7 @@ class TicTacToe
   end
 
    def won?()
-    chkwon = 0
+    checkwon = 0
     WIN_COMBINATIONS.each do |win_combination|
 
     index_0 = win_combination[0]
